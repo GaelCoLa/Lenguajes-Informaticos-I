@@ -191,3 +191,14 @@ footer{
     padding: 0.2rem;
     margin-top: 1.5rem;
 }
+
+dt{
+    font-family: var(--fuente-principal);
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+dd{
+    font-family: var(--fuente-principal);
+    font-size: 1.15rem;
+}

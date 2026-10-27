@@ -3,81 +3,166 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tokioton - Inicio</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/CSS/estilos.css">
-    <title>Tokioton - Inicio</title>
 </head>
 
 <body>
-<header>
+
+    <!-- navbar con responsive -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top" aria-label="Navegación principal">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">Tokioton</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal"
+                aria-controls="menuPrincipal" aria-expanded="false" aria-label="Mostrar u ocultar el menú">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menuPrincipal">
+            <ul class="navbar-nav ms-auto mt-0">
+                <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="lugares.html">Lugares</a></li>
+                <li class="nav-item"><a class="nav-link" href="ciudad.html">Ciudad</a></li>
+                <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<header class="text-center">
     <h1>Tokioton</h1>
-    <p>Tradición y futuro en la capital de Japón.</p>
-    
-    <nav>
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="lugares.html">Lugares</a></li>
-            <li><a href="ciudad.html">Ciudad</a></li>
-            <li><a href="contacto.html">Contacto</a></li>       
-        </ul>
-    </nav>
+    <p class="mb-0">Tradición y futuro en la capital de Japón.</p>
 </header>
 
-<main>
-    <section>
-        <h2>Bienvenidos a Tokioton</h2>
-        <p>
-            <strong>Tokioton</strong> es la capital de Japón y una de las areas metropolitanas mas pobladas del mundo.
-            Combina <em>templos centenarios</em> con arquitectura ultramoderna, barrios electronicos, mercados 
-            tradicionales y una de las escenas gastronomicas mas reconocidas a nivel mundial.
-        </p>
+<main class="container">
 
-        <img src="/IMG/tokyo-tower-at-night-54wp04wdp57r7btb.jpg" alt="El Tokyo Skytree" width="500" height="250">
+    <section>
+        <div class="row align-items-center g-4">
+            <div class="col-12 col-lg-6">
+                <h2>Bienvenidos a Tokioton</h2>
+                <p>
+                    <strong>Tokioton</strong> es la capital de Japón y una de las áreas metropolitanas más pobladas del mundo.
+                    Combina <em>templos centenarios</em> con arquitectura ultramoderna, barrios electrónicos, mercados
+                    tradicionales y una de las escenas gastronómicas más reconocidas a nivel mundial.
+                </p>
+                <a href="ciudad.html" class="btn btn-dark btn-lg">Conocé la ciudad</a>
+            </div>
+            <div class="col-12 col-lg-6">
+                <img class="img-fluid rounded m-0" src="/IMG/tokyo-tower-at-night-54wp04wdp57r7btb.jpg"
+                     alt="Torre de Tokioton iluminada de noche" width="500" height="250">
+            </div>
+        </div>
     </section>
 
+    <!-- grilla de cards -->
     <section>
-        <h2>Lo mas destacado</h2>
+        <h2>Lo más destacado</h2>
         <p>Algunos de los motivos por los que visitar la ciudad:</p>
-        <ul>
-            <li>El templo <strong>Senso-ji</strong>, el mas antiguo de la ciudad.</li>
-            <li>El cruce de <strong>Shibuya</strong>, uno de los mas transitados del mundo.</li>
-            <li>El <strong>Tokioton Skytree</strong>, torre de comunicaciones y mirador iconico.</li>
-            <li>Una agenda cultural intensa, con festivales tradicionales durante todo el año.</li>
-        </ul>
-        <p>
-            Para conocer la historia y los datos generales de la ciudad, visita la seccion <a href="ciudad.html">ciudad</a>. Para el detalles de cada atractivo, recorre la seccion <a href="lugares.html">lugares</a>.
+
+        <div class="row g-4">
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100">
+                    <div class="ratio ratio-16x9">
+                        <img class="card-img-top m-0 rounded-0 object-fit-cover" src="/IMG/sensoji.jpg" alt="Templo Senso-ji">
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <span class="badge bg-warning text-dark align-self-start">Tradición</span>
+                        <h3 class="card-title h5 mt-2">Templo Senso-ji</h3>
+                        <p class="card-text">El templo más antiguo de la ciudad, en el barrio de Asakusa.</p>
+                        <a href="lugares.html#templosenso-ji" class="btn btn-outline-dark mt-auto">Ver más</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100">
+                    <div class="ratio ratio-16x9">
+                        <img class="card-img-top m-0 rounded-0 object-fit-cover" src="/IMG/cruce_de_shibuya.png" alt="Cruce de Shibuya">
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <span class="badge bg-danger align-self-start">Imperdible</span>
+                        <h3 class="card-title h5 mt-2">Cruce de Shibuya</h3>
+                        <p class="card-text">Uno de los cruces peatonales más transitados del mundo.</p>
+                        <a href="ciudad.html#barrios" class="btn btn-outline-dark mt-auto">Ver más</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100">
+                    <div class="ratio ratio-16x9">
+                        <img class="card-img-top m-0 rounded-0 object-fit-cover" src="/IMG/torre_tokio.avif" alt="Torre de Tokioton">
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <span class="badge bg-dark align-self-start">Vistas</span>
+                        <h3 class="card-title h5 mt-2">Tokioton Skytree</h3>
+                        <p class="card-text">Torre de comunicaciones y mirador icónico de la ciudad.</p>
+                        <a href="lugares.html#torretokio" class="btn btn-outline-dark mt-auto">Ver más</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <p class="mt-4">
+            Además, Tokioton tiene una agenda cultural intensa, con festivales tradicionales durante todo el año.
+            Para conocer la historia y los datos generales de la ciudad, visitá la sección <a href="ciudad.html">ciudad</a>.
+            Para el detalle de cada atractivo, recorré la sección <a href="lugares.html">lugares</a>.
         </p>
     </section>
 
     <section id="eventos">
-        <h2>Como planificar tu visita?</h2>
-        <p>Sugerimos organizar la visita en este orden para aprovechar mejor los horarios:</p>
-        <ol>
-            <li>Empezar la mañana en el templo Senso-ji, antes de que llegue la multitud</li>
-            <li>Almorzar en Asakusa o moverse hacia akihabara</li>
-            <li>Visitar el Tokyo Skytree a media tarde para ver la ciudad con luz de dia</li>
-            <li>Cerrar el dia en Shibuya, con el cruce iluminado y la vida nocturna del barrio</li>
-        </ol>
-        <img src="/IMG/Tokyo_s_id19_18.webp" alt="Entrada al Senso-ji" width="500" height="300">
-
-    <p>
-        La agenda completa de eventos y actividades culturales esta detallada en la pagina de <a href="lugares.html">lugares</a>.
-    </p>    
-
+        <div class="row align-items-center g-4">
+            <div class="col-12 col-md-7">
+                <h2>¿Cómo planificar tu visita?</h2>
+                <p>Sugerimos organizar la visita en este orden para aprovechar mejor los horarios:</p>
+                <ol>
+                    <li>Empezar la mañana en el templo Senso-ji, antes de que llegue la multitud.</li>
+                    <li>Almorzar en Asakusa o moverse hacia Akihabara.</li>
+                    <li>Visitar el Tokioton Skytree a media tarde para ver la ciudad con luz de día.</li>
+                    <li>Cerrar el día en Shibuya, con el cruce iluminado y la vida nocturna del barrio.</li>
+                </ol>
+                <p class="mb-0">
+                    La agenda completa de eventos y actividades culturales está detallada en la página de
+                    <a href="lugares.html">lugares</a>.
+                </p>
+            </div>
+            <div class="col-12 col-md-5">
+                <img class="img-fluid rounded m-0" src="/IMG/Tokyo_s_id19_18.webp"
+                     alt="Entrada al Senso-ji" width="500" height="300">
+            </div>
+        </div>
     </section>
 
-    <aside>
-        <p>
-            ¿Necesitás información turística? Visita la
-            <a href="contacto.html">Pagina de contacto</a> para hablar con el centro de informacion turistica.
+    <!-- Aside con llamada a la acción -->
+    <aside class="d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3">
+        <p class="mb-0">
+            ¿Necesitás información turística? Visitá la página de contacto para hablar con el centro de información turística.
         </p>
+        <a href="contacto.html" class="btn btn-outline-dark flex-shrink-0">Ir a contacto</a>
     </aside>
 </main>
-    
-<footer>
-    <p>Sitio de informacion de Tokioton - Proyecto Academico.</p>
+
+<footer class="bg-dark text-white py-4">
+    <div class="container">
+        <div class="row align-items-center g-2">
+            <div class="col-12 col-md-6 text-md-start">
+                <p class="mb-0">Sitio de información de Tokioton - Proyecto Académico.</p>
+            </div>
+            <div class="col-12 col-md-6 text-md-end">
+                <a class="link-light me-3" href="lugares.html">Lugares</a>
+                <a class="link-light me-3" href="ciudad.html">Ciudad</a>
+                <a class="link-light" href="contacto.html">Contacto</a>
+            </div>
+        </div>
+    </div>
 </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>

@@ -88,27 +88,52 @@ header p{
 
 /* ESTILO DEL NAV */
 
-nav ul{
-list-style: none;
-display: flex;
-gap: 1.5rem;
-margin-top: 1rem;
-flex-wrap: wrap;
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
 }
 
-nav a{
-    color: var( --color-texto-claro);
+nav a {
+    position: relative;
+    display: inline-block;
+    color: var(--color-texto-claro);
     text-decoration: none;
     font-weight: 600;
-    padding: 0.4rem 0.2rem;
-    border-bottom: 2px solid transparent;
-    transition: color 0.2s ease, border-color 0.2s ease;
+    padding: 0.4rem 1rem;
+    border: 2px solid var(--color-secundario);
+    border-radius: 6px;
+    overflow: hidden;
+    z-index: 1;
+
+    transition: color 0.3s ease,
+                border-color 0.3s ease,
+                transform 0.25s ease;
 }
 
-nav a:hover{
-    color: var(--color-acento);
-    border-bottom: 2px solid var(--color-acento);
+nav a::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 0;
+    background-color: var(--color-acento);
+    transition: width 0.3s ease;
+    z-index: -1;
 }
+
+nav a:hover::before {
+    width: 100%;
+}
+
+nav a:hover {
+    color: var(--color-secundario);
+    border-color: var(--color-acento);
+    transform: scale(1.05);
+}
+
+
 
 main{
     padding: 0 0.5rem;
@@ -204,3 +229,21 @@ dd{
     font-family: var(--fuente-principal);
     font-size: 1.15rem;
 }
+
+nav a.navbar-brand {
+    border: none;
+    border-radius: 0;
+    padding: 0.3125rem 0;
+    transform: none;
+}
+
+nav a.navbar-brand::before {
+    display: none;
+}
+
+nav a.navbar-brand:hover {
+    border: none;
+    color: white;
+    transform: none;
+}
+

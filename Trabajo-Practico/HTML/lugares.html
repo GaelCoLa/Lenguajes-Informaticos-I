@@ -3,68 +3,218 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Tokioton - Lugares</title>
-        <link rel="stylesheet" href="/CSS/estilos.css">
+        <title>Tokioton - Lugares Emblemáticos</title>
+        
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-
+        <link rel="stylesheet" href="/CSS/estilos.css">
     </head>
+
     <body>
-        <header>
-            <h1>Tokioton | Lugares</h1>
-            <p>Tokioton combina tradición, cultura y modernidad. Entre sus principales atractivos se encuentran templos históricos, parques y edificios representativos de la ciudad</p>
-                <nav>
-                    <ul>
-                        <li><a href="index.html">Inicio</a></li>
-                        <li><a href="lugares.html">Lugares</a></li>
-                        <li><a href="ciudad.html">Ciudad</a></li>
-                        <li><a href="contacto.html">Contacto</a></li>       
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top" aria-label="Navegación principal">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="index.html">Tokioton</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal"
+                        aria-controls="menuPrincipal" aria-expanded="false" aria-label="Mostrar u ocultar el menú">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="menuPrincipal">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="lugares.html">Lugares</a></li>
+                        <li class="nav-item"><a class="nav-link" href="ciudad.html">Ciudad</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
                     </ul>
-                </nav>
+                </div>
+            </div>
+        </nav>
+
+        <header class="text-center py-4">
+            <div class="container">
+                <h1>Tokioton | Lugares</h1>
+                <p class="mb-0"><strong>Tokioton</strong>, su historia, identidad, población y principales características.</p>
+            </div>
         </header>
 
-        <main>
-        <section id="torretokio">
-        <h2>Torre de Tokioton</h2>
-        <p>La Torre de Tokioton es uno de los símbolos más conocidos de la ciudad. Se encuentra en Minato y ofrece una vista panorámica de Tokioton desde sus miradores.</p>
-        <p> <strong> ¿Qué hacer?</strong>  </p>
-        <ul>
-            <li>Subir a los miradores.</li>
-            <li>Sacarse fotografías</li>
-            <li>Observar la ciudad de día o de noche</li>
-        </ul>
-        <p> <strong>Recomendacion:</strong> Es ideal para conocer uno de los lugares más representativos de Tokioton y disfrutar de una vista increíble.</p>
-        <img src="/IMG/torre_tokio.avif" alt="Torre de Tokioton" width="150" height="300">
-        </section>
-        <section id="templosenso-ji">
-        <h2>Templo Senso-ji</h2>
-        <p>Ubicado en Asakusa, Sensō-ji es uno de los templos más famosos de Tokioton. Se destaca por su arquitectura tradicional y por la calle comercial Nakamise-dori.</p>
-        <p> <strong> ¿Qué hacer?</strong>  </p>
-        <ol>
-            <li>Visitar el templo.</li>
-            <li>Recorrer Nakamise-dori.</li>
-            <li>Conocer productos y comidas tradicionales.</li>
-        </ol>
-        <p> <strong>Recomendacion:</strong> Es una excelente opción para conocer la cultura y la historia japonesa.</p>
-        <img src="/IMG/sensoji.jpg" alt="Templo Senso-ji" width="150" height="300">
-        </section>
-        <section id="parqueueno">
-        <h2>Parque Ueno</h2>
-        <p>El Parque Ueno, ubicado en Taitō, combina naturaleza y cultura. Cuenta con espacios verdes, museos y otras atracciones. </p>
-        <p> <strong> ¿Qué hacer?</strong> </p>
-        <ul>
-            <li>Recorrer el parque.</li>
-            <li>Visitar museos.</li>
-            <li>Observar los cerezos en primavera.</li>
-        </ul>
-        <p> <strong>Recomendacion:</strong> Es un lugar ideal para relajarse y conocer otra parte de Tokioton.</p>
-            <img src="/IMG/temploueno.webp" alt="Parque Ueno" width="300" height="300">
-        </section> 
+        <main class="container py-5">
+            <section id="torretokio" class="mb-5 pb-4 border-bottom">
+                <div class="row align-items-center g-5">
+                    <div class="col-12 col-lg-6">
+                        <img src="/IMG/torre_tokio.avif" alt="Torre de Tokioton" class="img-fluid rounded-4 shadow-lg w-100 object-fit-cover" style="max-height: 450px;" loading="lazy">
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <div class="d-flex align-items-center flex-wrap gap-3 mb-3">
+                            <h2 class="display-6 fw-bold mb-0">Torre de Tokioton</h2>
+                            <span class="badge text-bg-danger px-3 py-2">Mirador e Ícono Urbano</span>
+                        </div>
+
+                        <p class="lead fs-6 text-muted">
+                            Ubicada en el distrito de Minato, es uno de los símbolos visuales e históricos más reconocidos a nivel internacional.
+                        </p>
+                        <p>
+                            La torre no solo funciona como estructura de telecomunicaciones, sino que alberga miradores que permiten apreciar vistas envolventes de toda la metrópoli e incluso divisar el Monte Fuji en días despejados.
+                        </p>
+                        
+                        <div class="card bg-light border-0 rounded-3 p-3 my-4">
+                            <h3 class="h6 fw-bold text-dark mb-2">📌 ¿Qué hacer durante la visita?</h3>
+                            <ul class="mb-0 ps-3 small text-secondary">
+                                <li class="mb-1">Subir a los miradores principal y superior para admirar el horizonte urbano.</li>
+                                <li class="mb-1">Fotografiar la estructura iluminada durante la noche.</li>
+                                <li>Disfrutar de las tiendas temáticas y cafeterías en la base.</li>
+                            </ul>
+                        </div>
+
+                        <div class="alert alert-warning d-flex align-items-center mb-0" role="alert">
+                            <div class="small">
+                                <strong>💡 Recomendación:</strong> Visítala al atardecer para contemplar la transición de la luz natural a la impresionante iluminación nocturna de la ciudad.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="templosenso-ji" class="mb-5 pb-4 border-bottom">
+                <div class="row align-items-center g-5 flex-lg-row-reverse">
+                    <div class="col-12 col-lg-6">
+                        <img src="/IMG/sensoji.jpg" alt="Templo Senso-ji" class="img-fluid rounded-4 shadow-lg w-100 object-fit-cover" style="max-height: 450px;" loading="lazy">
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <div class="d-flex align-items-center flex-wrap gap-3 mb-3">
+                            <h2 class="display-6 fw-bold mb-0">Templo Sensō-ji</h2>
+                            <span class="badge text-bg-warning text-dark px-3 py-2">Cultura y Tradición</span>
+                        </div>
+
+                        <p class="lead fs-6 text-muted">
+                            El templo budista más antiguo de Tokioton, ubicado en el histórico barrio de Asakusa.
+                        </p>
+                        <p>
+                            Famoso por su monumental puerta <em>Kaminarimon</em> (Puerta del Trueno) con su característico farol rojo gigante. El camino hacia la sala principal transcurre por Nakamise-dori, una histórica calle comercial activa desde el periodo Edo.
+                        </p>
+
+                        <div class="card bg-light border-0 rounded-3 p-3 my-4">
+                            <h3 class="h6 fw-bold text-dark mb-2">📌 Recorrido recomendado:</h3>
+                            <ol class="mb-0 ps-3 small text-secondary">
+                                <li class="mb-1">Cruzar la puerta Kaminarimon y tomar la clásica foto del farol gigante.</li>
+                                <li class="mb-1">Recorrer Nakamise-dori para probar aperitivos tradicionales como el <em>ningyo-yaki</em>.</li>
+                                <li>Presentar respetos y purificarse con el humo del incienso en el salón principal.</li>
+                            </ol>
+                        </div>
+
+                        <div class="alert alert-warning d-flex align-items-center mb-0" role="alert">
+                            <div class="small">
+                                <strong>💡 Recomendación:</strong> Llegar temprano por la mañana para recorrer las calles con tranquilidad antes de las horas de mayor concurrencia.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="parqueueno" class="mb-5 pb-4 border-bottom">
+                <div class="row align-items-center g-5">
+                    <div class="col-12 col-lg-6">
+                        <img src="/IMG/temploueno.webp" alt="Parque Ueno" class="img-fluid rounded-4 shadow-lg w-100 object-fit-cover" style="max-height: 450px;" loading="lazy">
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <div class="d-flex align-items-center flex-wrap gap-3 mb-3">
+                            <h2 class="display-6 fw-bold mb-0">Parque Ueno</h2>
+                            <span class="badge text-bg-success px-3 py-2">Naturaleza y Museos</span>
+                        </div>
+
+                        <p class="lead fs-6 text-muted">
+                            Un amplio espacio verde situado en Taitō que integra naturaleza, historia y una oferta cultural incomparable.
+                        </p>
+                        <p>
+                            Además de ser uno de los puntos principales para el avistamiento de los cerezos en flor (*Hanami*), alberga dentro de sus terrenos los museos más importantes de la ciudad, santuarios ocultos y el estanque Shinobazu.
+                        </p>
+
+                        <div class="card bg-light border-0 rounded-3 p-3 my-4">
+                            <h3 class="h6 fw-bold text-dark mb-2">📌 Puntos clave dentro del parque:</h3>
+                            <ul class="mb-0 ps-3 small text-secondary">
+                                <li class="mb-1">Caminar por sus avenidas arboladas y bordear el estanque Shinobazu.</li>
+                                <li class="mb-1">Visitar el Museo Nacional de Tokioton o el Museo de Arte Metropolitano.</li>
+                                <li>Disfrutar del ambiente de relajación al aire libre.</li>
+                            </ul>
+                        </div>
+
+                        <div class="alert alert-warning d-flex align-items-center mb-0" role="alert">
+                            <div class="small">
+                                <strong>💡 Recomendación:</strong> Es una parada indispensable en primavera para disfrutar del florecimiento de los cerezos junto a los residentes locales.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="consejos" class="my-5">
+                <h2 class="text-center mb-4">Preguntas Frecuentes para Visitantes</h2>
+                <div class="row justify-content-center">
+                    <div class="col-12 col-lg-10">
+                        <div class="accordion shadow-sm" id="accordionVisitas">
+                            
+                            <div class="accordion-item">
+                                <h3 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        ¿Cuál es la mejor época del año para visitar estos lugares?
+                                    </button>
+                                </h3>
+                                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionVisitas">
+                                    <div class="accordion-body text-secondary">
+                                        La primavera (marzo a mayo) y el otoño (septiembre a noviembre) son las mejores temporadas debido al clima templado y los deslumbrantes paisajes de cerezos en flor (*sakura*) o el follaje otoñal (*momiji*).
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h3 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        ¿Cómo me desplazo entre un atractivo y otro?
+                                    </button>
+                                </h3>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionVisitas">
+                                    <div class="accordion-body text-secondary">
+                                        La forma más rápida y eficiente es utilizar la red de metro y trenes urbanos. Cada uno de estos puntos turísticos cuenta con estaciones principales a pocos minutos a pie.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h3 class="accordion-header" id="headingThree">
+                                    <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        ¿Se necesita entrada anticipada?
+                                    </button>
+                                </h3>
+                                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionVisitas">
+                                    <div class="accordion-body text-secondary">
+                                        El Templo Sensō-ji y el Parque Ueno son de acceso libre y gratuito. Para subir a los miradores de la Torre de Tokioton o ingresar a los museos del parque se recomienda comprar los tickets online para evitar colas.
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
         </main>
-        <footer>
-            <p>Sitio de informacion de Tokioton - Proyecto Academico.</p>
+
+        <footer class="bg-dark text-white py-4 mt-auto">
+            <div class="container">
+                <div class="row align-items-center g-2">
+                    <div class="col-12 col-md-6 text-md-start">
+                        <p class="mb-0 text-muted">Sitio de información de Tokioton - Proyecto Académico.</p>
+                    </div>
+                    <div class="col-12 col-md-6 text-md-end">
+                        <a class="link-light me-3 text-decoration-none" href="index.html">Inicio</a>
+                        <a class="link-light me-3 text-decoration-none fw-bold" href="lugares.html" aria-current="page">Lugares</a>
+                        <a class="link-light me-3 text-decoration-none" href="ciudad.html">Ciudad</a>
+                        <a class="link-light text-decoration-none" href="contacto.html">Contacto</a>
+                    </div>
+                </div>
+            </div>
         </footer>
-        
+
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     </body>
 </html>

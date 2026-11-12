@@ -247,3 +247,143 @@ nav a.navbar-brand:hover {
     transform: none;
 }
 
+/* MODO OSCURO*/
+
+body,
+section,
+aside,
+.card {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.oscuro {
+    --color-fondo: #12141F;
+    --color-fondo-claro: #1B1F3B;
+    --color-texto: #EDEAE3;
+    --color-primario: #FF6B6F;
+}
+
+body.oscuro h3 {
+    color: var(--color-texto-claro);
+}
+
+body.oscuro section {
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+body.oscuro aside {
+    background-color: #262B4D;
+}
+
+body.oscuro .card {
+    --bs-card-bg: #262B4D;
+    --bs-card-color: var(--color-texto);
+    --bs-card-border-color: #3A4070;
+}
+
+body.oscuro .btn-dark {
+    --bs-btn-color: var(--color-secundario);
+    --bs-btn-bg: var(--color-acento);
+    --bs-btn-border-color: var(--color-acento);
+    --bs-btn-hover-color: var(--color-secundario);
+    --bs-btn-hover-bg: #E3C35B;
+    --bs-btn-hover-border-color: #E3C35B;
+    --bs-btn-active-color: var(--color-secundario);
+    --bs-btn-active-bg: #EBCB6B;
+    --bs-btn-active-border-color: #EBCB6B;
+}
+
+body.oscuro .btn-outline-dark {
+    --bs-btn-color: var(--color-texto-claro);
+    --bs-btn-border-color: var(--color-texto-claro);
+    --bs-btn-hover-color: #1A1A1A;
+    --bs-btn-hover-bg: var(--color-texto-claro);
+    --bs-btn-hover-border-color: var(--color-texto-claro);
+    --bs-btn-active-color: #1A1A1A;
+    --bs-btn-active-bg: var(--color-texto-claro);
+    --bs-btn-active-border-color: var(--color-texto-claro);
+}
+
+body.oscuro .badge.bg-dark {
+    border: 1px solid #5A608F;
+}
+
+body.oscuro tbody tr:hover {
+    background-color: #262B4D;
+}
+
+body.oscuro th,
+body.oscuro td {
+    border-color: #3A4070;
+}
+
+#btn-modo {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    z-index: 1;
+    background-color: transparent;
+    color: var(--color-texto-claro);
+    border: 2px solid transparent;    
+    border-radius: 6px;
+    padding: 0.4rem 1rem;
+    transition: color 0.3s ease,
+                text-shadow 0.3s ease,
+                border-color 0.3s ease,
+                transform 0.25s ease;
+}
+
+#btn-modo::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 0;
+    background-color: var(--color-acento);
+    transition: width 0.3s ease;
+    z-index: -1;
+}
+
+#btn-modo:hover::before {
+    width: 100%;
+}
+
+#btn-modo:hover,
+#btn-modo:active {
+    background-color: transparent;
+    border-color: var(--color-acento);
+    transform: scale(1.05);
+
+    color: transparent;
+    text-shadow: 0 0 0 var(--color-secundario);
+}
+
+.btn.btn-animado {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: color 0.3s ease,
+                border-color 0.3s ease,
+                transform 0.25s ease;
+}
+
+.btn.btn-animado::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 0;
+    background-color: var(--color-acento);
+    transition: width 0.3s ease;
+    z-index: -1;
+}
+
+.btn.btn-animado:hover::before {
+    width: 100%;
+}
+
+.btn.btn-animado:hover,
+.btn.btn-animado:active {
+    background-color: transparent;
+    color: var(--color-secundario);
+    border-color: var(--color-acento);
+    transform: scale(1.03);
+}

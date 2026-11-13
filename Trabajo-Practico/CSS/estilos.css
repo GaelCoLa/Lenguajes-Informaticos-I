@@ -252,6 +252,7 @@ nav a.navbar-brand:hover {
 body,
 section,
 aside,
+.list-group-item,
 .card {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
@@ -314,6 +315,12 @@ body.oscuro tbody tr:hover {
 
 body.oscuro th,
 body.oscuro td {
+    border-color: #3A4070;
+}
+
+body.oscuro .list-group-item {
+    background-color: #262B4D;
+    color: var(--color-texto-claro);
     border-color: #3A4070;
 }
 

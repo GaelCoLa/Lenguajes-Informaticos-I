@@ -152,6 +152,34 @@ section img{
     border-radius: 6px;
 }
 
+/* TARJETAS */
+
+.card {
+    background-color: var(--color-fondo-claro);
+    color: var(--color-texto);
+    border: 1px solid rgba(27, 31, 59, 0.15);
+    border-radius: 8px;
+    transition: background-color 0.3s ease,
+                color 0.3s ease,
+                border-color 0.3s ease;
+}
+
+.card h3 {
+    font-family: var(--fuente-titulos);
+    color: var(--color-secundario);
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.card p,
+.card li {
+    color: var(--color-texto);
+}
+
+.card .text-secondary {
+    color: #6C757D !important;
+}
+
 /* ESTILO DE SELECTOR DE EVENTOS*/
 #eventos{
     border-left: 4px solid var(--color-primario);
@@ -262,6 +290,7 @@ body.oscuro {
     --color-fondo-claro: #1B1F3B;
     --color-texto: #EDEAE3;
     --color-primario: #FF6B6F;
+    --bs-secondary-color: #b1b1b1;
 }
 
 body.oscuro h3 {
@@ -277,9 +306,22 @@ body.oscuro aside {
 }
 
 body.oscuro .card {
-    --bs-card-bg: #262B4D;
-    --bs-card-color: var(--color-texto);
-    --bs-card-border-color: #3A4070;
+    background-color: #262B4D;
+    color: var(--color-texto);
+    border-color: #3A4070;
+}
+
+body.oscuro .card h3 {
+    color: var(--color-texto);
+}
+
+body.oscuro .card p,
+body.oscuro .card li {
+    color: var(--color-texto);
+}
+
+body.oscuro .card .text-secondary {
+    color: var(--bs-secondary-color) !important;
 }
 
 body.oscuro .btn-dark {
@@ -322,6 +364,28 @@ body.oscuro .list-group-item {
     background-color: #262B4D;
     color: var(--color-texto-claro);
     border-color: #3A4070;
+}
+
+body.oscuro .accordion {
+    --bs-accordion-bg: #262B4D;
+    --bs-accordion-color: var(--color-texto);
+    --bs-accordion-border-color: #3A4070;
+
+    --bs-accordion-btn-bg: #262B4D;
+    --bs-accordion-btn-color: var(--color-texto);
+
+    --bs-accordion-active-bg: #1B1F3B;
+    --bs-accordion-active-color: var(--color-primario);
+
+    --bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem rgba(255, 107, 111, 0.25);
+}
+
+body.oscuro .accordion-button::after {
+    filter: invert(1);
+}
+
+body.oscuro .accordion-body.text-secondary {
+    color: var(--bs-secondary-color) !important;
 }
 
 #btn-modo {

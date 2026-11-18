@@ -1,14 +1,14 @@
-// Íconos del botón
 const ICONO_LUNA = "🌙"; 
 const ICONO_SOL = "☀️"; 
 
 const boton = document.getElementById("btn-modo");
 const CLAVE = "modoOscuro";
 
+// Actualiza el icono
 const actualizarBoton = () => {
     const esOscuro = document.body.classList.contains("oscuro");
 
-    // Cambio de icono segun el modo
+    // Cambia de icono segun el modo
     boton.textContent = esOscuro ? ICONO_SOL : ICONO_LUNA;
 
     const texto = esOscuro ? "Activar modo claro" : "Activar modo oscuro";
@@ -16,6 +16,7 @@ const actualizarBoton = () => {
     boton.setAttribute("title", texto);
 };
 
+// Carga la preferencia guardada
 try {
     if (localStorage.getItem(CLAVE) === "true") {
         document.body.classList.add("oscuro");
@@ -24,6 +25,7 @@ try {
     console.warn("No se pudo leer la preferencia guardada.");
 }
 
+// Cambio de modo
 if (boton) {
     actualizarBoton();
 
@@ -32,6 +34,7 @@ if (boton) {
 
         actualizarBoton();
 
+        // Guarda la preferencia
         try {
             localStorage.setItem(CLAVE, document.body.classList.contains("oscuro"));
         } catch (error) {

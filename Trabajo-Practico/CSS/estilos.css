@@ -2,6 +2,7 @@
 Unico archivo para estilos.
 */
 
+/* VARIABLES */
 :root{
     --color-primario: #B31217;
     --color-secundario: #1B1F3B;
@@ -14,12 +15,14 @@ Unico archivo para estilos.
     --fuente-titulos: 'Playfair Display', serif;
 }
 
+/* RESET */
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+/* IMAGENES */
 img{
     max-width: 100%;
     height: auto;
@@ -38,6 +41,7 @@ body{
     margin: auto;
 }
 
+/* TITULOS */
 h1, h2, h3{
     font-family: var(--fuente-titulos);
     color: var(--color-secundario);
@@ -63,6 +67,7 @@ h3{
     color: var(--color-secundario);
 }
 
+/* PARRAFOS Y LINKS */
 p{
     margin-bottom: 1rem;
 }
@@ -135,6 +140,7 @@ nav a:hover {
 
 
 
+/* MAIN Y SECCIONES */
 main{
     padding: 0 0.5rem;
 }
@@ -185,6 +191,7 @@ section img{
     border-left: 4px solid var(--color-primario);
 }
 
+/* LISTAS */
 section ul, section ol{
     margin-left: 1.5rem;
     margin-bottom: 1rem;
@@ -205,6 +212,7 @@ aside{
 
 }
 
+/* TABLAS */
 table{
     width: 100%;
     border-collapse: collapse;
@@ -227,6 +235,7 @@ tbody tr:hover{
     background-color: #FDF3E7;
 }
 
+/* FORMULARIO */
 form{
     display: flex;
     flex-direction: column;
@@ -239,6 +248,7 @@ form label{
     margin-bottom: 0.3rem;
 }
 
+/* FOOTER */
 footer{
     background-color: var(--color-secundario);
     color: var(--color-texto-claro);
@@ -247,6 +257,7 @@ footer{
     margin-top: 1.5rem;
 }
 
+/* LISTAS DE DEFINICION */
 dt{
     font-family: var(--fuente-principal);
     font-weight: 600;
@@ -258,6 +269,7 @@ dd{
     font-size: 1.15rem;
 }
 
+/* LOGO DEL NAVBAR */
 nav a.navbar-brand {
     border: none;
     border-radius: 0;
@@ -285,6 +297,7 @@ aside,
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* VARIABLES DEL MODO OSCURO */
 body.oscuro {
     --color-fondo: #12141F;
     --color-fondo-claro: #1B1F3B;
@@ -305,6 +318,7 @@ body.oscuro aside {
     background-color: #262B4D;
 }
 
+/* TARJETAS EN MODO OSCURO */
 body.oscuro .card {
     background-color: #262B4D;
     color: var(--color-texto);
@@ -324,6 +338,7 @@ body.oscuro .card .text-secondary {
     color: var(--bs-secondary-color) !important;
 }
 
+/* BOTONES EN MODO OSCURO */
 body.oscuro .btn-dark {
     --bs-btn-color: var(--color-secundario);
     --bs-btn-bg: var(--color-acento);
@@ -351,6 +366,7 @@ body.oscuro .badge.bg-dark {
     border: 1px solid #5A608F;
 }
 
+/* TABLAS EN MODO OSCURO */
 body.oscuro tbody tr:hover {
     background-color: #262B4D;
 }
@@ -360,12 +376,14 @@ body.oscuro td {
     border-color: #3A4070;
 }
 
+/* LISTAS EN MODO OSCURO */
 body.oscuro .list-group-item {
     background-color: #262B4D;
     color: var(--color-texto-claro);
     border-color: #3A4070;
 }
 
+/* ACORDEON EN MODO OSCURO */
 body.oscuro .accordion {
     --bs-accordion-bg: #262B4D;
     --bs-accordion-color: var(--color-texto);
@@ -388,6 +406,7 @@ body.oscuro .accordion-body.text-secondary {
     color: var(--bs-secondary-color) !important;
 }
 
+/* BOTON DE MODO OSCURO */
 #btn-modo {
     position: relative;
     display: inline-block;
@@ -428,6 +447,7 @@ body.oscuro .accordion-body.text-secondary {
     text-shadow: 0 0 0 var(--color-secundario);
 }
 
+/* BOTONES ANIMADOS */
 .btn.btn-animado {
     position: relative;
     overflow: hidden;
